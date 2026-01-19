@@ -1,5 +1,6 @@
 package com.example.unit1
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -31,6 +32,12 @@ class Homepage : AppCompatActivity() {
 
         notesbtn.setOnClickListener {
             realtimedatabase()
+        }
+
+        val cart = findViewById<Button>(R.id.btncart)
+        cart.setOnClickListener {
+            val intent = Intent(this, ShoppingCart::class.java)
+            startActivity(intent)
         }
 
     }
@@ -67,6 +74,6 @@ class Homepage : AppCompatActivity() {
             .addOnFailureListener {e ->
                 Toast.makeText(this, "Error adding note ${e.message}", Toast.LENGTH_SHORT).show()
             }
-
     }
+
 }

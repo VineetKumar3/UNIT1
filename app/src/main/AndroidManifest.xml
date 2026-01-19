@@ -12,11 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UNIT1">
         <activity
+            android:name=".ShoppingCart"
+            android:exported="true" />
+        <activity
             android:name=".Homepage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".LoginUser"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".RegisterUser"
             android:exported="true">
